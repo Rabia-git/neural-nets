@@ -23,7 +23,7 @@ model.compile(optimizer='adam',
 
 x = np.column_stack((train_df.x.values, train_df.y.values))
 
-model.fit(x, train_df.color.values, batch_size=32, epochs=20)
+model.fit(x, train_df.color.values, batch_size=16, epochs=20)
 
 test_df = pd.read_csv('./data/test.csv')
 test_x = np.column_stack((test_df.x.values, test_df.y.values))
